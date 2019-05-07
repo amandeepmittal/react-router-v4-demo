@@ -1,5 +1,6 @@
 import React from "react"
-import { BrowserRouter as Router, Route, Link } from "react-router-dom"
+import { BrowserRouter as Router, Route, NavLink } from "react-router-dom"
+import "./App.css"
 
 import Home from "./components/Home"
 import About from "./components/About"
@@ -9,13 +10,13 @@ function App() {
 		<Router>
 			<div>
 				<nav style={{ margin: 10 }}>
-					<Link to='/' style={{ padding: 10 }}>
+					<NavLink to='/' exact activeClassName='active'>
 						Home
-					</Link>
+					</NavLink>
 
-					<Link to='/about' style={{ padding: 10 }}>
+					<NavLink to='/about' activeClassName='active'>
 						About
-					</Link>
+					</NavLink>
 				</nav>
 				<Route path='/' exact component={Home} />
 				<Route path='/about' component={About} />
