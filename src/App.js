@@ -1,21 +1,8 @@
 import React from "react"
 import { BrowserRouter as Router, Route } from "react-router-dom"
 
-function Home() {
-	return (
-		<div>
-			<h1>Home Component</h1>
-		</div>
-	)
-}
-
-function About() {
-	return (
-		<div>
-			<h1>About Component</h1>
-		</div>
-	)
-}
+import Home from "./components/Home"
+import About from "./components/About"
 
 function App() {
 	return (
